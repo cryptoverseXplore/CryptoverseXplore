@@ -251,18 +251,20 @@ button:focus {
 }
 
 .home-header {
-  padding-top: 80px !important;
+  text-align: center !important;
+  padding-top: 30px !important;
 }
 
 .home-content {
+  text-align: center !important;
   padding: 9rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
 }
 
 .heading {
+  text-align: center !important;
   font-size: 2.4em !important;
-  padding-left: 50px !important;
 }
 
 .heading-name {

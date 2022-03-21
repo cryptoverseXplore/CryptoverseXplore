@@ -106,26 +106,17 @@ function Home() {
       <div className="main-app"/>
         <Container className="home-content">
           <Row>
-            <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+            <Col className="home-header">
+              <h1 className="heading">
                 Hi There!{" "}
               </h1>
 
               <h1 className="heading">
                 <strong className="main-name"> MINT YOUR NFT!</strong>
               </h1>
-              <div style={{ paddingBottom: 15}} className="heading">
+              <div className="heading">
                 {currentAccount ? mintNftButton() : connectWalletButton()}
               </div>
-            </Col>
-
-            <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
-              />
             </Col>
           </Row>
         </Container>
