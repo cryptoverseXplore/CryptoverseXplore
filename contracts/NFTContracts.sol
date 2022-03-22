@@ -153,8 +153,8 @@ contract CryptoverseXplore is ERC721A, Ownable, ReentrancyGuard {
     whitelistedAddresses = _users;
   }
  
-  function withdraw() public payable onlyOwner {
-    (bool success, ) = payable(payments).call{value: address(this).balance}("");
+  function withdraw() external onlyOwner {
+    (bool success, ) = payments.call{value: address(this).balance}("");
     require(success);
   }
 
