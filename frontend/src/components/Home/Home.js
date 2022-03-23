@@ -42,7 +42,7 @@ function Home() {
         const nftContract = new ethers.Contract(contractAddress, abi, signer);
 
         console.log("Initialize payment");
-        let nftTxn = await nftContract.mint(1, { value: ethers.utils.parseEther("0.01")});
+        let nftTxn = await nftContract.mint(1, { value: ethers.utils.parseEther("0.25")});
 
         console.log("Mining... please wait");
         await nftTxn.wait();
