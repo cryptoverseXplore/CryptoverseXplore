@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd frontend && npm run start"
+    "start": "cd ./frontend && npm run-script start"
   },
   "keywords": [],
   "author": "",
