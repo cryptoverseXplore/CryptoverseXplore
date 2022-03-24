@@ -8,6 +8,11 @@ import React, { useState, useEffect } from "react";
 import "../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import { ChakraProvider, useDisclosure } from "@chakra-ui/react";
+import ConnectButton from "../ConnectButton";
+import AccountModal from "../AccountModal"
+import theme from "../theme";
+
 const contractAddress = "0x5710100DCDC5d59F971C93489fbBB3287cE97EF4";
 const abi = contract.abi;
 
@@ -68,7 +73,7 @@ function Home() {
 
   const mintNftButton = () => {
     return (
-      <button onClick={mintNftHandler} className='cta-button mint-nft-button'>
+      <button onClick={mintNftHandler} className='cta-button mint-nft-button' color='orange'>
         Mint NFT
       </button>
     )
@@ -100,6 +105,10 @@ function Home() {
   useEffect(() => {
     checkWalletIsConnected();
   }, [])
+
+
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <section>

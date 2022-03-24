@@ -273,7 +273,7 @@ button:focus {
 }
 
 .main-name {
-  color: #F66300;
+  color: #e2640f;
 }
 
 .Typewriter__wrapper {
@@ -430,4 +430,16 @@ button:focus {
 
 .blockquote-footer {
   color: #a588c0 !important;
+}
+
+.css-u82va9 {
+  margin-top: 0.4em !important;
+}
+
+.css-pwba6i {
+  margin-top: 0.4em !important;
+}
+
+.chakra-text {
+  margin-bottom: 0 !important;
 }
