@@ -6,6 +6,13 @@ import reportWebVitals from "./reportWebVitals";
 import { DAppProvider } from "@usedapp/core";
 
 
+// const config = {
+//   readOnlyChainId: ChainId.Rinkeby,
+//   readOnlyUrls: {
+//     [ChainId.Rinkeby]: 'https://mainnet.infura.io/v3/62687d1a985d4508b2b7a24827551934',
+//   },
+// }
+
 
 ReactDOM.render(
   <React.StrictMode>
