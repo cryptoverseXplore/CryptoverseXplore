@@ -9,6 +9,28 @@ import "./ERC721A.sol";
 
 pragma solidity >=0.7.0 <0.9.0;
 
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@&&@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@#GB#&@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@&GYP#@@@@@@@@@&@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@&GJY#@@@@@@@@&&&&@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@#Y?5&@@@@@&##&&@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@#J?Y&@&##B#&&@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@Y?J5BBB#&@@&@@@@@&&#&@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@#JJJB&&&&&&@@@&##B#&@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@B?JJB&&@@@&#BGB#&@@@@&&@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@#JJ?P@#BGPGB#@@@@@B5J?B@@@@&#&@@@
+// @@@@@@@@@@@@@@@@@#J?JJ5PB#@@@@@B5J?JP#@@&#B#&@@@@@
+// @@@@@@@@@@@@@@#57!JY?JY&@@&B5?7?5B@@@#BBB&@@@@@@@@
+// @@@@@@@@@@@BY~^?G@@@PJ?7J77?5B&@&#GGB#&@@@&&&@@@@@
+// @@@@@@@@BJ~.^5&@@#PY7~~~!?G&#BGGB#&@@@&###&@@@@@@@
+// @@@@@#Y~....~?7~^^!JP#@#PYJ?JG#@@&##BB#&@@@@@@@@@@
+// @@@G7:.....:^~?5B&@@@@@@@@#G5YYYYY5GB###&&@@@@@@@@
+// @@?..:^!7YPB&@@@@@@@@@@@@@@@@@&&######&&@@@@@@@@@@
+// @@BBB#&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 contract CryptoverseXplore is ERC721A, Ownable, ReentrancyGuard {
   using Strings for uint256;
 
@@ -48,10 +70,10 @@ contract CryptoverseXplore is ERC721A, Ownable, ReentrancyGuard {
     require(!paused, "the contract is paused");
     uint256 supply = totalSupply();
     require(_mintAmount > 0, "need to mint at least 1 NFT");
-    require(_mintAmount <= maxMintAmount, "max mint amount per session exceeded");
     require(supply + _mintAmount <= maxSupply, "max NFT limit exceeded");
 
     if (msg.sender != owner()) {
+      require(_mintAmount <= maxMintAmount, "max mint amount per session exceeded");
         if(onlyWhitelisted == true) {
             require(isWhitelisted(msg.sender), "user is not whitelisted");
             uint256 ownerTokenCount = addressPresaleMinted[msg.sender];
